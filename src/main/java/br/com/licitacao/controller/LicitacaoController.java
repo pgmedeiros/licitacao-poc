@@ -4,7 +4,9 @@ import br.com.licitacao.service.LicitacaoService;
 import br.com.licitacao.dto.LicitacaoRequest;
 import br.com.licitacao.dto.LicitacaoResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("api/licitacao")
@@ -34,5 +36,15 @@ public class LicitacaoController {
     @DeleteMapping("{id}")
     public void delete(@PathVariable Integer id) {
         service.delete(id);
+    }
+
+    @PostMapping("/upload/{id}")
+    public void upload(@RequestParam MultipartFile file, @PathVariable Integer id) {
+        service.upload(file, id);
+    }
+
+    @GetMapping("/download/{id}")
+    public Resource download(@PathVariable Integer id) {
+        return service.download(id);
     }
 }
