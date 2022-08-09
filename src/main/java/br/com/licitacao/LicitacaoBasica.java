@@ -1,13 +1,13 @@
-package com.springsecurityteste.basico;
+package br.com.licitacao;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BasicoApplication {
+public class LicitacaoBasica {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BasicoApplication.class, args);
+		SpringApplication.run(LicitacaoBasica.class, args);
 	}
 
 }

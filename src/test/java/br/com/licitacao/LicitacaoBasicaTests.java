@@ -1,10 +1,10 @@
-package com.springsecurityteste.basico;
+package br.com.licitacao;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BasicoApplicationTests {
+class LicitacaoBasicaTests {
 
 	@Test
 	void contextLoads() {
